@@ -15,6 +15,7 @@
 		B966E7C020FE81E50028976C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B966E7BE20FE81E50028976C /* LaunchScreen.storyboard */; };
 		B966E7CB20FE81E60028976C /* SpriteKit_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B966E7CA20FE81E60028976C /* SpriteKit_DemoTests.swift */; };
 		B966E7D620FE81E60028976C /* SpriteKit_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B966E7D520FE81E60028976C /* SpriteKit_DemoUITests.swift */; };
+		B966E7E420FE92630028976C /* wolverine.png in Resources */ = {isa = PBXBuildFile; fileRef = B966E7E320FE92630028976C /* wolverine.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		B966E7D120FE81E60028976C /* SpriteKit DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SpriteKit DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B966E7D520FE81E60028976C /* SpriteKit_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteKit_DemoUITests.swift; sourceTree = "<group>"; };
 		B966E7D720FE81E60028976C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B966E7E320FE92630028976C /* wolverine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wolverine.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				B966E7B720FE81E40028976C /* GameViewController.swift */,
 				B966E7B920FE81E40028976C /* Main.storyboard */,
 				B966E7BC20FE81E50028976C /* Assets.xcassets */,
+				B966E7E320FE92630028976C /* wolverine.png */,
 				B966E7BE20FE81E50028976C /* LaunchScreen.storyboard */,
 				B966E7C120FE81E60028976C /* Info.plist */,
 			);
@@ -235,6 +238,7 @@
 				B966E7BB20FE81E40028976C /* Main.storyboard in Resources */,
 				B966E7BD20FE81E50028976C /* Assets.xcassets in Resources */,
 				B966E7C020FE81E50028976C /* LaunchScreen.storyboard in Resources */,
+				B966E7E420FE92630028976C /* wolverine.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
