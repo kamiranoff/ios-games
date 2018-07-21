@@ -15,19 +15,20 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         
         if let view = self.view as! SKView? {
-            let scene = GameScene(size: view.bounds.size);
-            
-            scene.scaleMode = .aspectFill;
-            
-            view.presentScene(scene);
-            
-            view.ignoresSiblingOrder = true;
-            
-            
-            // Debugging
-            view.showsFPS = true;
-            view.showsNodeCount = true;
-            view.showsPhysics = true;
+            if let scene = SKScene(fileNamed: "FirstScene") {
+                
+                scene.scaleMode = .aspectFill;
+                
+                view.presentScene(scene);
+                view.ignoresSiblingOrder = true;
+                
+                
+                // Debugging
+                view.showsFPS = true;
+                view.showsNodeCount = true;
+                view.showsPhysics = true;
+            }
+                
         }
     }
 }

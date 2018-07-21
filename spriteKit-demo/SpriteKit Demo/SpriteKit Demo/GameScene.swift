@@ -10,17 +10,13 @@ import SpriteKit
 
 class GameScene: SKScene {
     
-//    let myFirstNode = SKNode();
-//    let myFirstSpriteNode = SKSpriteNode(color: UIColor.red, size: CGSize(width: 200.0, height: 200.0));
-//    let myFirstTextureNode = SKSpriteNode(imageNamed: "wolverine");
-//    let blueBox = SKSpriteNode(color: UIColor.blue, size: CGSize(width: 100.0, height: 100.0));
-    
     let wolverineSprite = SKSpriteNode(imageNamed: "sprites0");
     var wolverineFrames = [SKTexture]();
     
     override func didMove(to view: SKView) {
         
         wolverineSprite.position = CGPoint(x: frame.midX, y: frame.midY);
+        wolverineSprite.zPosition = 10;
         addChild(wolverineSprite);
         
         let textureAtlas = SKTextureAtlas(named: "Player Frames");
@@ -28,24 +24,6 @@ class GameScene: SKScene {
             let textureName = "Sprites" + String(index);
             wolverineFrames.append(textureAtlas.textureNamed(textureName));
         }
-//        addChild(myFirstNode);
-//
-//        myFirstSpriteNode.position = CGPoint(x: frame.midX, y: frame.midY)
-//        myFirstSpriteNode.anchorPoint = CGPoint.zero
-//        addChild(myFirstSpriteNode);
-//
-//        myFirstTextureNode.zPosition = 1;
-//        myFirstTextureNode.size = CGSize(width: 100.0, height: 100.0);
-//        myFirstSpriteNode.addChild(myFirstTextureNode);
-//
-//        blueBox.zPosition = 2;
-//        blueBox.position = CGPoint(x: myFirstSpriteNode.size.width/2, y: myFirstSpriteNode.size.height/2)
-//        myFirstSpriteNode.addChild(blueBox);
-//
-//        physicsBody = SKPhysicsBody(edgeLoopFrom: frame);
-//        myFirstTextureNode.physicsBody = SKPhysicsBody(circleOfRadius: myFirstTextureNode.size.width/2);
-//        myFirstTextureNode.physicsBody?.allowsRotation = true;
-//        myFirstTextureNode.physicsBody?.restitution = 0.7;
     }
     
     
