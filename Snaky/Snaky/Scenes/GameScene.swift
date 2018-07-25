@@ -15,6 +15,7 @@ class GameScene: SKScene {
     var bestScore: SKLabelNode!
     var playButton: SKShapeNode!
     var game: GameManager!
+    var scorePos: CGPoint?
     
     var currentScore: SKLabelNode!
     var playerPositions: [(Int, Int)] = []
@@ -26,6 +27,19 @@ class GameScene: SKScene {
         initializeMenu()
         game = GameManager(scene: self)
         initializeGameView()
+        
+        let swipeRight:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeR))
+        swipeRight.direction = .right
+        view.addGestureRecognizer(swipeRight)
+        let swipeLeft:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeL))
+        swipeLeft.direction = .left
+        view.addGestureRecognizer(swipeLeft)
+        let swipeUp:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeU))
+        swipeUp.direction = .up
+        view.addGestureRecognizer(swipeUp)
+        let swipeDown:UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeD))
+        swipeDown.direction = .down
+        view.addGestureRecognizer(swipeDown)
 
     }
     
@@ -72,6 +86,7 @@ class GameScene: SKScene {
         currentScore.text = "Score: 0"
         currentScore.fontColor = SKColor.white
         self.addChild(currentScore)
+        bestScore.text = "Best Score: \(UserDefaults.standard.integer(forKey: "bestScore"))"
         //5
         let width = frame.size.width - 200
         let height = frame.size.height - 300
@@ -83,6 +98,10 @@ class GameScene: SKScene {
         self.addChild(gameBG)
         //6
         createGameBoard(width: width, height: height)
+    }
+    
+    override func update(_ currentTime: TimeInterval) {
+        game.update(time: currentTime);
     }
     
     //create a game board, initialize array of cells
@@ -145,5 +164,19 @@ class GameScene: SKScene {
             self.game.initGame()
 
         }
+    }
+  
+    //2
+    @objc func swipeR() {
+        game.swipe(ID: 3)
+    }
+    @objc func swipeL() {
+        game.swipe(ID: 1)
+    }
+    @objc func swipeU() {
+        game.swipe(ID: 2)
+    }
+    @objc func swipeD() {
+        game.swipe(ID: 4)
     }
 }
